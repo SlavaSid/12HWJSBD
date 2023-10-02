@@ -14,10 +14,10 @@ console.log(names);
 
 let names = ['Tom', 'Pavel', 'Anna', 'Alisa', 'Robert'];
 
-const addNames  = ((nam1, nam2, nam3) => {
+const addNames  = (([nam1, nam2, nam3]) => {
     console.log(nam1, nam2, nam3);
-    names.forEach(item => item = nam1, nam2, nam3)})
-addNames(...names);
+    names.forEach(item => item = nam1, nam2, nam3)});
+addNames(names);
 
  // Задание 3
 
