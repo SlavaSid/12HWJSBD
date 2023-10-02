@@ -7,7 +7,7 @@ let [name1, name2, ...allNames] = names;
 console.log(name1, name2);
 
 allNames.forEach(item => console.log(item));
-if(allNames.length < 2){
+if(names.length < 2){
     name2 = 'alex';
 }
 console.log(name2);
