@@ -1,37 +1,37 @@
 // Задание 1
 
-// Задать массив имен. Создать 2 переменные, которые будут хранить первых 2 имени, вывести их в консоль. Создать массив, который будет хранить остальные имена, вывести имена из него по одному в консоль. Если кол-во элементов массива меньше 2, то вторая переменная должна стать равна "alex".
+// // Задать массив имен. Создать 2 переменные, которые будут хранить первых 2 имени, вывести их в консоль. Создать массив, который будет хранить остальные имена, вывести имена из него по одному в консоль. Если кол-во элементов массива меньше 2, то вторая переменная должна стать равна "alex".
 
-let names = ['Tom', 'Pavel', 'Anna'];
-let [name1, name2 = 'Alex', ...allNames] = names;
-console.log(name1, name2);
+// let names = ['Tom', 'Pavel', 'Anna'];
+// let [name1, name2 = 'Alex', ...allNames] = names;
+// console.log(name1, name2);
 
-allNames.forEach(item => console.log(item));
-console.log(names);
+// allNames.forEach(item => console.log(item));
+// console.log(names);
 
-// Задание 2
-// Задать массив имен. Задать функцию, которая принимает 3 параметра и выводит их в консоль. Передать массив в функцию. Внутри функции каждый параметр должен быть равен одному из элементов массива.
+// // Задание 2
+// // Задать массив имен. Задать функцию, которая принимает 3 параметра и выводит их в консоль. Передать массив в функцию. Внутри функции каждый параметр должен быть равен одному из элементов массива.
 
-let names = ['Tom', 'Pavel', 'Anna', 'Alisa', 'Robert'];
+// let names = ['Tom', 'Pavel', 'Anna', 'Alisa', 'Robert'];
 
-const addNames  = (([nam1, nam2, nam3]) => {
-    console.log(nam1, nam2, nam3);
-    names.forEach(item => item = nam1, nam2, nam3)});
-addNames(names);
+// const addNames  = (([nam1, nam2, nam3]) => {
+//     console.log(nam1, nam2, nam3);
+//     names.forEach(item => item = nam1, nam2, nam3)});
+// addNames(names);
 
- // Задание 3
+//  // Задание 3
 
- // Задать объект с N полей. Создать 2 переменные, которые будут называться так же, как поля, и хранить 2 значения полей объекта. Если соответствующих полей в объекте нет, задать значения чисел 1 и 2. Все остальные поля объекта записать в переменную fields.
+//  // Задать объект с N полей. Создать 2 переменные, которые будут называться так же, как поля, и хранить 2 значения полей объекта. Если соответствующих полей в объекте нет, задать значения чисел 1 и 2. Все остальные поля объекта записать в переменную fields.
 
 
 
-const myObject = {
-    field1: 'value1',
-    field2: 'value2',
-    field3: 'value3',
-    field4: 'value4',
-}
-const {field1 = 1, field2 = 2, ...filds} = myObject;
+// const myObject = {
+//     field1: 'value1',
+//     field2: 'value2',
+//     field3: 'value3',
+//     field4: 'value4',
+// }
+// const {field1 = 1, field2 = 2, ...filds} = myObject;
 
 // // Задание 4
 
@@ -41,15 +41,15 @@ const {field1 = 1, field2 = 2, ...filds} = myObject;
 
 // // ПОДСКАЗКА: В этом задании вы должны использовать как оператор "rest", так и оператор "spread".
 
+const numbers = [1, '3', 33, 4, 0.7];
 const meanScore = (...arr) => {
-    arr.forEach(item => {
-        if(item !== Number){
-            console.error('Все аргументы в вызове функции должны быть числами!');
-        }
+
+if(!arr.every(item => typeof item === 'number')){
+    console.error('Все аргументы в вызове функции должны быть числами!');
+} else {
     const sum = arr.reduce((acc, item) => acc + item, 0);
-    return (sum / arr.length).toFixed(2);
-   
-    })
-
-
+    return ( sum / arr.length).toFixed(2);  
 }
+}
+
+meanScore(...numbers);
